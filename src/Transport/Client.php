@@ -116,7 +116,7 @@ class Client implements HttpClient
     /**
      * (@inheritdoc}
      */
-    public function sendRequest(RequestInterface $request)
+    public function sendRequest(RequestInterface $request): \Psr\Http\Message\ResponseInterface
     {
         if ($this->username || $this->password) {
             switch ($this->authType) {
